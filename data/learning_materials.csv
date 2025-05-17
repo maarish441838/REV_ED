@@ -1,0 +1,21 @@
+material_id,subject,difficulty,style,title,url
+1,math,easy,visual,Math Basics Video,https://example.com/math1
+2,math,medium,auditory,Algebra Podcast,https://example.com/math2
+3,math,hard,kinesthetic,Math Hands-on Activity,https://example.com/math3
+4,math,easy,visual,Geometry Visual Guide,https://example.com/math4
+5,math,medium,auditory,Calculus Audio Lesson,https://example.com/math5
+6,math,hard,kinesthetic,Math Puzzle Game,https://example.com/math6
+7,math,easy,visual,Advanced Math Concepts,https://example.com/math7
+8,science,medium,auditory,Science Fundamentals Video,https://example.com/science1
+9,science,hard,kinesthetic,Chemistry Podcast,https://example.com/science2
+10,science,easy,visual,Biology Lab Simulation,https://example.com/science3
+11,science,medium,auditory,Physics Visual Guide,https://example.com/science4
+12,science,hard,kinesthetic,Earth Science Audio,https://example.com/science5
+13,science,easy,visual,Science Experiment Guide,https://example.com/science6
+14,science,medium,auditory,Advanced Science Concepts,https://example.com/science7
+15,english,hard,kinesthetic,Grammar Video Course,https://example.com/english1
+16,english,easy,visual,Literature Podcast,https://example.com/english2
+17,english,medium,auditory,Writing Workshop,https://example.com/english3
+18,english,hard,kinesthetic,Reading Comprehension Guide,https://example.com/english4
+19,english,easy,visual,Vocabulary Audio Lessons,https://example.com/english5
+20,english,medium,auditory,Creative Writing Exercises,https://example.com/english6

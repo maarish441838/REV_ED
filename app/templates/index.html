@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI-Driven Learning System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personalized Learning System</h1>
+        
+        <form method="POST">
+            <h2>Student Information</h2>
+            
+            <div class="form-group">
+                <label>Math Score (0-100):</label>
+                <input type="number" name="math_score" min="0" max="100" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Science Score (0-100):</label>
+                <input type="number" name="science_score" min="0" max="100" required>
+            </div>
+            
+            <div class="form-group">
+                <label>English Score (0-100):</label>
+                <input type="number" name="english_score" min="0" max="100" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Learning Style:</label>
+                <select name="learning_style" required>
+                    <option value="visual">Visual</option>
+                    <option value="auditory">Auditory</option>
+                    <option value="kinesthetic">Kinesthetic</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Engagement Level:</label>
+                <select name="engagement_level" required>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            
+            <button type="submit">Get Recommendations</button>
+        </form>
+        
+        {% if recommendations %}
+        <div class="results">
+            <h2>Recommended Learning Materials</h2>
+            <div class="materials">
+                {% for material in recommendations %}
+                <div class="material">
+                    <h3>{{ material.title }}</h3>
+                    <p><strong>Subject:</strong> {{ material.subject }}</p>
+                    <p><strong>Difficulty:</strong> {{ material.difficulty }}</p>
+                    <p><strong>Style:</strong> {{ material.style }}</p>
+                    <a href="{{ material.url }}" target="_blank">Access Material</a>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <h2>Personalized Quiz</h2>
+            <div class="quiz">
+                {% for question in quiz_questions %}
+                <div class="question">
+                    <h3>{{ question.question }}</h3>
+                    <p><strong>Subject:</strong> {{ question.subject }} ({{ question.difficulty }})</p>
+                    <ul>
+                        {% for option in question.options %}
+                        <li>{{ option }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
